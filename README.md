@@ -97,7 +97,14 @@ module.exports = {
 #### Example 2:  Swarm
 
 ```
-
+module.exports = {
+  type: 'storage',
+  order: 5,
+  displayName: 'Swarm',
+  name: 'swarm',
+  // https://swarm-gateways.net/bzz:/theswarm.eth/downloads/
+  repository: 'https://gethstore.blob.core.windows.net'
+}
 ```
 
 #### Plugin Properties
