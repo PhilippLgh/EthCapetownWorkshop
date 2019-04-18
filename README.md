@@ -50,8 +50,10 @@ Web apps are UI frontends written with Web technologies which can be hosted insi
 
 ### Plugins
 
-Grid uses a plugin architecture to integrate, query releases and interact with various Ethereum clients. To define a new client all you need to do is to add a new file to the `ethereum_clients/client_plugins/` directory within Grid.
+Grid uses a plugin architecture to integrate, query releases and interact with various Ethereum clients. To define a new client all you need to do is to add a new file to the [`ethereum_clients/client_plugins/`](https://github.com/ethereum/grid/tree/master/ethereum_clients/client_plugins) directory within Grid.
 Grid will automatically detect the client and provide UI elements to manager releases for the specified client.
+
+#### Example: Clef
 
 Here is an example for a Grid plugin. The below plugin structure specifies the [Ethereum Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) integration and was taken from: [https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js](https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js)
 
@@ -76,7 +78,9 @@ module.exports = {
 
 #### Plugin Properties
 
-The `type` field is used to specify one of the possible types [`client`, `signer`, `storage`]. `order` is an optional field to specify a position where the client should be display within the UI.
+The `type` field is used to specify one of the possible types [`client`, `signer`, `storage`]. 
+
+`order` is an optional field to specify a position where the client should be display within the UI.
 
 The `displayName` is th name that is shown to the user while the `name` property is used internally to query and find certain plugins by name.
 
@@ -89,4 +93,14 @@ Grid (electron-app-manager) works on packages which are compressed container or 
 
 #### Client Scripts
 
-Some clients don't have executable binaries and require a runtime such as Python or Node.js (`nodex client.js` ). These clients are **currently not supported**. A way around this restriction is to bundle them with something like Webpack and [https://github.com/zeit/pkg](https://github.com/zeit/pkg) in Node.js and comparable tools in other ecosystems.
+Some clients don't have executable binaries and require a runtime such as Python or Node.js (`nodex client.js` ). These clients are **currently not supported**. A way around this restriction is to bundle them with something like Webpack and [https://github.com/zeit/pkg](https://github.com/zeit/pkg) in Node.js or comparable tools in other ecosystems.
+
+### Apps
+
+Apps for Grid are developed separately using Web technologies. While there are no restrictions and any UI Web framework or non at all could be used, we recommend React especially to be able to use [Ethereum React Components](https://github.com/ethereum/ethereum-react-components) and the hot reloading that is part of bootstrapping tools like [create-react-app](https://github.com/facebook/create-react-app).
+
+To develop an app with Grid one needs to spin up a webserver for the application on port `3000` or point Grid's Webview to the correct location. **It is not recommended and will probably be disabled to navigate to hosted (non-localhost) Websites or use Grid as a browser**. Grid is not a browser and is lacking security features that would allow safe browsing. Only use Grid for your own apps and don't try to load other packages or websites.
+
+#### Grid API
+
+#### Example: Toy Wallet App
