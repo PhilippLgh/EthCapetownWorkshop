@@ -106,27 +106,19 @@ Grid (electron-app-manager) works on packages which are compressed container or 
 
 Example:
 ```
-  flags: {
-      '--networkid': {
-        type: 'select',
-        name: 'Network',
-        configKey: 'network',
-        options: ['?', '?']
-      },
-      '--rinkeby': {
-        type: 'select',
-        name: 'Network',
-        configKey: 'network',
-        options: ['?', '?']
-      },
-      '--testnet': {
-        type: 'select',
-        name: 'Network',
-        configKey: 'network',
-        options: ['?', '?']
-      },
-
-    },
+flags: {
+  '--datadir': {
+    type: 'path',
+    name: 'Data Directory',
+    configKey: 'dataDir'
+  },
+  '--syncmode': {
+    type: 'select',
+    name: 'Sync Mode',
+    configKey: 'syncMode',
+    options: ['fast', 'light', 'full']
+  },
+  ...
  
 ```
 
