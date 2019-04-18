@@ -37,7 +37,18 @@ yarn && yarn start:dev
 
 There are also prebuilt and pre-bundled installers and binaries available to have a convenient way to run the `production` version. The binaries can be found on the [Grid Website](https://grid.ethereum.org/) or the [GitHub releases](https://github.com/ethereum/grid/releases).
 
-## Plugin structure
+## Extending Grid
+
+There are currently two ways to extends Grid's functionality or integrate with it.
+
+1. Client plugins
+2. Web Apps
+
+Client plugins specify repositories of Ethereum clients and metadata to download and run them. The Grid can discover and load these plugin and will try to generate UI elements such as config forms for these clients.
+
+Web apps are UI frontends written with Web technologies which can be hosted inside of Grid UI. They get access to the loaded clients and can interact through IPC with client processes and listen to state changes through events.
+
+### Plugins
 
 Here is an example for a Grid plugin. The below plugin structure specifies the [Ethereum Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) integration and was taken from: [https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js](https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js)
 
@@ -60,7 +71,7 @@ module.exports = {
 
 >Grid uses `electron-app-manager` under the hood which handles all the download and version management of the binaries so if some values are missing it can be helpful to check the docs of it as well.
 
-### Plugin Properties
+#### Plugin Properties
 
 The `type` field is used to specify one of the possible types [`client`, `signer`, `storage`]. `order` is an optional field to specify a position where the client should be display within the UI.
 
