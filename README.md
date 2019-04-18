@@ -50,6 +50,9 @@ Web apps are UI frontends written with Web technologies which can be hosted insi
 
 ### Plugins
 
+Grid uses a plugin architecture to integrate, query releases and interact with various Ethereum clients. To define a new client all you need to do is to add a new file to the `ethereum_clients/client_plugins/` directory within Grid.
+Grid will automatically detect the client and provide UI elements to manager releases for the specified client.
+
 Here is an example for a Grid plugin. The below plugin structure specifies the [Ethereum Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) integration and was taken from: [https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js](https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js)
 
 ```
@@ -84,6 +87,6 @@ The `repository` field is a required information which is needed to discover and
 
 Grid (electron-app-manager) works on packages which are compressed container or archive files like `.zip` or `.tar`. The `binaryName` option specifies the name of the executable binary in the package. This is important because archives can contain more than one file, they can have nested sub-directories and binaries have platform specific extensions (.exe).
 
-### Client Scripts
+#### Client Scripts
 
 Some clients don't have executable binaries and require a runtime such as Python or Node.js (`nodex client.js` ). These clients are **currently not supported**. A way around this restriction is to bundle them with something like Webpack and [https://github.com/zeit/pkg](https://github.com/zeit/pkg) in Node.js and comparable tools in other ecosystems.
