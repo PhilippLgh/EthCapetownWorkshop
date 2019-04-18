@@ -53,7 +53,7 @@ Web apps are UI frontends written with Web technologies which can be hosted insi
 Grid uses a plugin architecture to integrate, query releases and interact with various Ethereum clients. To define a new client all you need to do is to add a new file to the [`ethereum_clients/client_plugins/`](https://github.com/ethereum/grid/tree/master/ethereum_clients/client_plugins) directory within Grid.
 Grid will automatically detect the client and provide UI elements to manager releases for the specified client.
 
-#### Example: Clef
+#### Example 1: Clef
 
 Here is an example for a Grid plugin. The below plugin structure specifies the [Ethereum Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) integration and was taken from: [https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js](https://github.com/ethereum/grid/blob/master/ethereum_clients/client_plugins/clef.js)
 
@@ -74,7 +74,11 @@ module.exports = {
 }
 ```
 
->Grid uses `electron-app-manager` under the hood which handles all the download and version management of the binaries so if some values are missing it can be helpful to check the docs of it as well.
+#### Example 2:  Swarm
+
+```
+
+```
 
 #### Plugin Properties
 
@@ -91,6 +95,10 @@ The `repository` field is a required information which is needed to discover and
 
 Grid (electron-app-manager) works on packages which are compressed container or archive files like `.zip` or `.tar`. The `binaryName` option specifies the name of the executable binary in the package. This is important because archives can contain more than one file, they can have nested sub-directories and binaries have platform specific extensions (.exe).
 
+`resolveIpc` is used to defined a method that returns a valid IPC endpoint so that Grid can establish a secure connection with the spawned client process.
+
+>Grid uses `electron-app-manager` under the hood which handles all the download and version management of the binaries so if some values are missing it can be helpful to check the docs of it as well.
+
 #### Client Scripts
 
 Some clients don't have executable binaries and require a runtime such as Python or Node.js (`nodex client.js` ). These clients are **currently not supported**. A way around this restriction is to bundle them with something like Webpack and [https://github.com/zeit/pkg](https://github.com/zeit/pkg) in Node.js or comparable tools in other ecosystems.
@@ -103,4 +111,43 @@ To develop an app with Grid one needs to spin up a webserver for the application
 
 #### Grid API
 
+```
+```
+
+#### Events
+
+Clients emit the following event types:
+
+`starting`: the client binary is being executed in a separate process without feedback.
+
+`started`: the client process is running and has notified Grid that it is ready.
+
+`connected`: Grid has successfully established an IPC connection to the client. RPC API is available now.
+
+`error`: an error occurred at any client lifecycle stage.
+
+`stopped`: the client was stopped by the user or due to an event.
+
+`log`: the clientt has written something to `stdout` usually terminal output.
+
 #### Example: Toy Wallet App
+
+1. Create a new React app and start the server
+
+```
+$ npx create-react-app MyWallet
+$ cd MyWallet
+$ yarn
+$ yarn start
+```
+
+> make sure that the server is running on port `3000`
+
+2. Start Grid to see if the UI can be rendered
+
+```
+$ cd grid
+$ yarn start:dev
+```
+
+3. Write code to interact with the Grid API
