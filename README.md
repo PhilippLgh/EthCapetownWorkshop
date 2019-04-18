@@ -17,6 +17,21 @@ Grid can host and launch other interfaces and the functionality can be extended 
 
 ![Grid Tray Integration](/assets/Grid-Tray.png)
 
+## How is related to Web3, Mist or Metamask?
+
+The Ethereum Mist browser can be considered a predecessor of Grid. However, [Mist is no longer developed ](https://medium.com/@avsa/sunsetting-mist-da21c8e943d2) and the lessons learned are the main inspiration and *raison d'être* for Grid.
+
+Web3 browsers such as Mist and Metamask share the same core mechanics: an Ethereum  client is started, a connection is established to the Ethereum network and the client process and an API (Web3) is provided to some App or DApp for easy interaction with the network, smart contracts et cetera.
+
+Grid has the same core mechanics. However, instead of connecting to a centralized 3rd-party-hosted client in the cloud like Infura / Metamask it gives the user full control over the client, version and configuration. Everything is run locally. And Grid tries to make this as easy as possible.
+
+Grid focuses on a more experienced audience and the interactions with the clients happen on lower levels (no Web3) and are more powerful but also less convenient. Clients are not limited to any specific type and Grid's functionality can be extended.
+
+If your goal is to write an application like CryptoKitties you should probably consider Metamask, Opera, Status or any other Web3 enabled browser for development and testing. 
+
+However, if you plan to develop a visualization for network behavior & events, a P2P sharing app for Swarm, a signer UI for Clef, your own wallet, dev tools or test suites to compare different spec implementations then you will probably want to use Grid to accelerate the development.
+
+Also if you don't want to host your app on a server but have it packaged and deployed in a more decentralized fashion, then Grid, `ethpkg` and `electron-app-manager` can help you with that as well.
 
 ## Installation
 
