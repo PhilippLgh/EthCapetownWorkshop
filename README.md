@@ -160,7 +160,7 @@ Clients emit the following event types:
 
 `log`: the clientt has written something to `stdout` usually terminal output.
 
-#### Example: Toy Wallet App
+#### Example: Toy Wallet Starter
 
 1. Create a new React app and start the server
 
@@ -181,3 +181,76 @@ $ yarn start:dev
 ```
 
 3. Write code to interact with the Grid API
+
+```
+ $ yarn add ethereum-react-components
+ $ yarn start
+
+ delete App.css contents
+ delete App.js body
+ ```
+
+ ```
+import React, { Component } from 'react';
+import './App.css';
+import { AccountItem } from 'ethereum-react-components'
+
+class App extends Component {
+
+  state = {
+    error: '',
+    accounts: []
+  }
+
+  componentDidMount = async () => { 
+    const geth = await window.grid.getClient('geth')
+    if (geth) {
+      try {
+        // https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_accounts
+        const accounts = await geth.sendRpc('eth_accounts')
+        if (accounts) {
+          console.log('accounts', accounts)
+          this.setState({
+            accounts: accounts
+          })
+        }
+      } catch (err) {
+        this.setState({
+          error: err.message
+        })
+      }
+    } else {
+      this.setState({
+        error: 'client not found'
+      })
+    }
+  }
+  renderAccountList = accounts => {
+    // <div>{account} - idx</div>
+    return (
+      <div>
+        { accounts.map((account, idx) => (
+            <AccountItem name="Account 1" address={account} />
+          ))}
+      </div>
+    )
+  }
+  render() {
+    const { error, accounts } = this.state
+    return (
+      <div className="App">
+        <h1>My Wallet - connected to Grid {window.grid.version}</h1>
+        <div>
+          {accounts && this.renderAccountList(accounts)}
+        </div>
+        <div>
+          {error && ('error:' + error)}
+        </div>
+      </div>
+    );  
+  }
+}
+
+export default App;
+
+ ```
