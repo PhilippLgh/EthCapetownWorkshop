@@ -156,8 +156,27 @@ To develop an app with Grid one needs to spin up a webserver for the application
 
 #### Grid API
 
+The Grid API is currently very small but powerful. Please expect breaking changes in the future though.
+
+The globally injected Grid object has only one method:
 ```
+const geth = await window.grid.getClient('geth')
 ```
+This will query all available clients by their `name` property and return a reference to the client it can find.
+
+From there you can interact with the client directly - please see the methods of the `PluginProxy` here:
+[https://github.com/ethereum/grid/blob/master/ethereum_clients/Plugin.js#L167](https://github.com/ethereum/grid/blob/master/ethereum_clients/Plugin.js#L167)
+
+The application can also subscribe to events like so:
+```
+const geth = await window.grid.getClient('geth')
+geth.on('connected', () => {
+  // use RPC methods here
+})
+```
+
+The next section describes the Event types in more detail.
+
 
 #### Events
 
