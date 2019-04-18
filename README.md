@@ -2,6 +2,17 @@
 
 ## What is Grid?
 
+“Often referred to […] as “digital frontier", the Grid was made to provide an experimental platform where all forms of research could be carried out at unparalleled speeds.” - [Tron Movie](https://tron.fandom.com/wiki/Grid)
+
+One way to describe Ethereum Grid is as a platform to run experiments, create prototypes (and hackathon projects) or develop fully working apps for the many available clients in the ecosystem. 
+Another description could be that Ethereum Grid is the control center for all kinds of clients and Ethereum core binaries.
+
+With Grid, they can be downloaded, configured, and started all in one place. But even more than this, Grid serves as an Ethereum provider which means once a client is configured and started, DApps can connect to Grid and share the connection to the Ethereum network.
+
+It is ideal for people who want to run a full node, have a convenient and secure way to update their binaries and don't want to rely on centralized 3rd party services like Infura / Metamask.
+
+Grid can host and launch other interfaces and the functionality can be extended and adjusted through apps and plugins.
+
 ## Installation
 
 Grid consists of 2 parts: the main application and the UI.
