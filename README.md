@@ -100,7 +100,40 @@ The `repository` field is a required information which is needed to discover and
 
 Grid (electron-app-manager) works on packages which are compressed container or archive files like `.zip` or `.tar`. The `binaryName` option specifies the name of the executable binary in the package. This is important because archives can contain more than one file, they can have nested sub-directories and binaries have platform specific extensions (.exe).
 
-`resolveIpc` is used to defined a method that returns a valid IPC endpoint so that Grid can establish a secure connection with the spawned client process.
+`resolveIpc` is used to defined a method that returns a valid IPC endpoint so that Grid can establish a secure connection to the spawned client process.
+
+`flags` is an object that specifies the various command line arguments a client accepts which is used to generate the configuration view:
+
+Example:
+```
+  flags: {
+      '--networkid': {
+        type: 'select',
+        name: 'Network',
+        configKey: 'network',
+        options: ['?', '?']
+      },
+      '--rinkeby': {
+        type: 'select',
+        name: 'Network',
+        configKey: 'network',
+        options: ['?', '?']
+      },
+      '--testnet': {
+        type: 'select',
+        name: 'Network',
+        configKey: 'network',
+        options: ['?', '?']
+      },
+
+    },
+ 
+```
+
+The generated config fields in Grid UI:
+
+![Grid Geth Config](/assets/Grid-Geth-Config.png)
+
 
 >Grid uses `electron-app-manager` under the hood which handles all the download and version management of the binaries so if some values are missing it can be helpful to check the docs of it as well.
 
