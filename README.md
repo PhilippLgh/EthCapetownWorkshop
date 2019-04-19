@@ -31,13 +31,13 @@ In order to hack on Grid we want to start it in `dev mode`, which is why we clon
 mkdir grid
 cd grid
 ```
-Install and run Grid UI:
+Install and run [Grid UI](https://github.com/ethereum/grid-ui):
 ```
 git clone https://github.com/ethereum/grid-ui.git
 cd grid-ui
 yarn && yarn start
 ```
-Install and run Grid:
+Install and run [Grid](https://github.com/ethereum/grid):
 ```
 cd ..
 git clone https://github.com/ethereum/grid.git
