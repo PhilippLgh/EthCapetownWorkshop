@@ -19,6 +19,7 @@ Install and run Grid:
 ```
 cd ..
 git clone https://github.com/ethereum/grid.git
+cd grid
 yarn && yarn start:dev
 ```
 
