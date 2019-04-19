@@ -11,7 +11,7 @@
 .. our suggestions but not limited to **(bonus points for creativity)**:
 
 - provider integrations e.g. metamask, custom protocol handler
-- new client plugins ([ethereumj](https://github.com/ethereum/ethereumj), [ganache](https://truffleframework.com/ganache))
+- new client plugins ([ethereumj](https://github.com/ethereum/ethereumj), [ganache](https://truffleframework.com/ganache), [pegasys pantheon](https://github.com/PegaSysEng/pantheon), [shasper](https://github.com/paritytech/shasper))
 - p2p file sharing app (ipfs / [swarm](https://swarm-guide.readthedocs.io/en/latest/introduction.html))
 - "scripted" client integrations ([ethereumjs](https://ethereumjs.github.io/), [trinity](https://trinity.ethereum.org/))
 - support for ethereum-based sidechains
