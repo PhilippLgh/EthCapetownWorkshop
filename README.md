@@ -1,6 +1,6 @@
 # EthCapetownWorkshop
 
-## Prices - The "Grid Wishlist"
+## Prizes - The "Grid Wishlist"
 
 ### 500 DAI for...
 
