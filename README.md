@@ -20,6 +20,7 @@
 - "finishing" the [wallet example](https://github.com/PhilippLgh/EthCapetownWorkshop/tree/master/my-wallet)
 - tools for [smart contract interaction](https://github.com/pi0neerpat/one-click-dApp)
 - tools to [visualize network activity](https://github.com/ethereum/go-ethereum/tree/master/dashboard)
+- [fixes and features in the core](https://github.com/ethereum/grid/projects/3)
 
 ## Installation
 
