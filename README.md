@@ -229,3 +229,5 @@ $ yarn start:dev
  $ yarn start
  ```
 
+replace App.js with:
+https://gist.github.com/PhilippLgh/1b6505d3caf1a183afb12cb5f387ca07
