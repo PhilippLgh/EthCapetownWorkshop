@@ -15,7 +15,7 @@
 - p2p file sharing app (ipfs / [swarm](https://swarm-guide.readthedocs.io/en/latest/introduction.html))
 - "scripted" client integrations ([ethereumjs](https://ethereumjs.github.io/), [trinity](https://trinity.ethereum.org/))
 - support for ethereum-based sidechains
-- [eth 2.0](https://github.com/ethereum/eth2.0-specs) use cases (spec testing, client integration, UX)
+- [eth 2.0](https://github.com/ethereum/eth2.0-specs) use cases (spec testing, client integration [nimbus](https://github.com/status-im/nimbus) / [lighthouse](https://github.com/sigp/lighthouse) / [prysmatic-prysm](https://github.com/prysmaticlabs/prysm), UX)
 - [clef signer](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) applications (e.g. [ethpkg](https://github.com/PhilippLgh/ethereum-signed-packages) integration)
 - "finishing" the [wallet example](https://github.com/PhilippLgh/EthCapetownWorkshop/tree/master/my-wallet)
 - tools for [smart contract interaction](https://github.com/pi0neerpat/one-click-dApp)
