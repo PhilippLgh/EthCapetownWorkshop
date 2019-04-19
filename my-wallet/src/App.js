@@ -24,6 +24,8 @@ class App extends Component {
       })
       if (geth.getState() === 'CONNECTED') {
         this.setConnected()
+      } else {
+        geth.on('connected', this.setConnected)
       }
     } else {
       this.setState({
@@ -38,6 +40,7 @@ class App extends Component {
     this.setState({
       geth: undefined
     })
+    geth.off('connected', this.setState)
   }
 
   setConnected = () => {
@@ -87,7 +90,7 @@ class App extends Component {
         <div>
           {connected
           ? !accounts && this.renderCreateAccount()
-          : <div>Please start Geth and <button onClick={() => window.location.reload()}>reload</button></div>
+          : <div>Please start Geth and wait or <button onClick={() => window.location.reload()}>reload</button></div>
           }
         </div>
         <div>
