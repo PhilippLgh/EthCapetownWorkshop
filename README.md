@@ -1,5 +1,22 @@
 # EthCapetownWorkshop
 
+## Prices - The "Grid Wishlist"
+
+###500 DAI for...
+
+.. our suggestions but not limited to **(bonus points for creativity)**:
+
+- provider integrations e.g. metamask, custom protocol handler
+- new client plugins ([ethereumj](https://github.com/ethereum/ethereumj), [ganache](https://truffleframework.com/ganache))
+- p2p file sharing app (ipfs / [swarm](https://swarm-guide.readthedocs.io/en/latest/introduction.html))
+- "scripted" client integrations ([ethereumjs](https://ethereumjs.github.io/), [trinity](https://trinity.ethereum.org/))
+- support for ethereum-based sidechains
+- [eth 2.0](https://github.com/ethereum/eth2.0-specs) use cases (spec testing, client integration, UX)
+- [clef signer](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) applications (e.g. [ethpkg](https://github.com/PhilippLgh/ethereum-signed-packages) integration)
+- "finishing" the [wallet example](https://github.com/PhilippLgh/EthCapetownWorkshop/tree/master/my-wallet)
+- tools for [smart contract interaction](https://github.com/pi0neerpat/one-click-dApp)
+- tools to [visualize network activity](https://github.com/ethereum/go-ethereum/tree/master/dashboard)
+
 ## Installation
 
 Grid consists of 2 parts: the main application and the UI.
@@ -42,11 +59,11 @@ Grid can host and launch other interfaces and the functionality can be extended 
 
 ![Grid Tray Integration](/assets/Grid-Tray.png)
 
-## How is Grid related to Web3, Mist or Metamask?
+## How is Grid related to Web3.js, Mist or Metamask?
 
 The Ethereum Mist browser can be considered a predecessor of Grid. However, [Mist is no longer developed](https://medium.com/@avsa/sunsetting-mist-da21c8e943d2) and the lessons learned are the main inspiration and *raison d'être* for Grid.
 
-Web3 browsers, such as Mist and Metamask, share the same core mechanics: an Ethereum client is started, a connection is established to the Ethereum network and the client process, and an API (Web3) is provided to some App or DApp for easy interaction with the network, smart contracts, et cetera.
+Web3 browsers, such as Mist and Metamask, share the same core mechanics: an Ethereum client is started, a connection is established to the Ethereum network and the client process, and an API (Web3.js) is provided to some App or DApp for easy interaction with the network, smart contracts, et cetera.
 
 Grid has the same core mechanics. However, instead of connecting to a centralized 3rd-party-hosted client in the cloud like Infura, it gives the user full control over the client, version and configuration. Everything is run locally. And Grid tries to make this as easy as possible.
 
@@ -231,5 +248,5 @@ $ yarn start:dev
  $ yarn start
  ```
 
-replace App.js with:
+Replace App.js with:
 https://gist.github.com/PhilippLgh/1b6505d3caf1a183afb12cb5f387ca07
