@@ -2,7 +2,9 @@
 
 ## Shortlink
 
-### bit.ly/2UsIcOb
+# bit.ly/2UsIcOb
+
+## #ethereum-grid on the discord chat
 
 ## Prizes - The "Grid Wishlist"
 
