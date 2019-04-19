@@ -49,7 +49,7 @@ Web3 browsers, such as Mist and Metamask, share the same core mechanics: an Ethe
 
 Grid has the same core mechanics. However, instead of connecting to a centralized 3rd-party-hosted client in the cloud like Infura, it gives the user full control over the client, version and configuration. Everything is run locally. And Grid tries to make this as easy as possible.
 
-Grid focuses on a more experienced audience and the interactions with the clients happen on lower levels (no Web3) and are more powerful but also less convenient. Clients are not limited to any specific type and Grid's functionality can be extended.
+Grid is designed for a more experienced user. The interactions with clients happen at lower levels (no Web3); they are more powerful, but also less convenient. Clients are not limited to any specific type and Grid's functionality can be extended.
 
 If your goal is to write an application like CryptoKitties, you should probably consider Metamask, Opera, Status or any other Web3 enabled browser for development and testing.
 
