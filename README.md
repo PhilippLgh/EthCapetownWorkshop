@@ -6,6 +6,8 @@
 
 ### #ethereum-grid on the discord chat
 
+![Grid Screenshot](/assets/Grid-Screenshot.png)
+
 ## Prizes - The "Grid Wishlist"
 
 ### 500 DAI for...
@@ -55,8 +57,6 @@ There are also prebuilt and pre-bundled installers and binaries available to hav
 
 One way to describe Ethereum Grid is a platform to run experiments, create prototypes (and hackathon projects) or develop fully working apps for the many available clients in the ecosystem.
 Another description could be that Ethereum Grid is the control center for all kinds of clients and Ethereum core binaries.
-
-![Grid Screenshot](/assets/Grid-Screenshot.png)
 
 With Grid, clients can be downloaded, configured, and started all in one place. But even more than this, Grid serves as an Ethereum provider, which means that once a client is configured and started, DApps can connect to Grid and share the connection to the Ethereum network.
 
