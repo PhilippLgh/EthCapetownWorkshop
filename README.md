@@ -207,8 +207,8 @@ Clients emit the following event types:
 1. Create a new React app and start the server
 
 ```
-$ npx create-react-app MyWallet
-$ cd MyWallet
+$ npx create-react-app my-wallet
+$ cd my-wallet
 $ yarn
 $ yarn start
 ```
@@ -227,72 +227,7 @@ $ yarn start:dev
 ```
  $ yarn add ethereum-react-components
  $ yarn start
-
- delete App.css contents
- delete App.js body
  ```
 
- ```
-import React, { Component } from 'react';
-import './App.css';
-import { AccountItem } from 'ethereum-react-components'
-
-class App extends Component {
-
-  state = {
-    error: '',
-    accounts: []
-  }
-
-  componentDidMount = async () => { 
-    const geth = await window.grid.getClient('geth')
-    if (geth) {
-      try {
-        // https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_accounts
-        const accounts = await geth.sendRpc('eth_accounts')
-        if (accounts) {
-          console.log('accounts', accounts)
-          this.setState({
-            accounts: accounts
-          })
-        }
-      } catch (err) {
-        this.setState({
-          error: err.message
-        })
-      }
-    } else {
-      this.setState({
-        error: 'client not found'
-      })
-    }
-  }
-  renderAccountList = accounts => {
-    // <div>{account} - idx</div>
-    return (
-      <div>
-        { accounts.map((account, idx) => (
-            <AccountItem name="Account 1" address={account} />
-          ))}
-      </div>
-    )
-  }
-  render() {
-    const { error, accounts } = this.state
-    return (
-      <div className="App">
-        <h1>My Wallet - connected to Grid {window.grid.version}</h1>
-        <div>
-          {accounts && this.renderAccountList(accounts)}
-        </div>
-        <div>
-          {error && ('error:' + error)}
-        </div>
-      </div>
-    );  
-  }
-}
-
-export default App;
-
- ```
+replace App.js with:
+[https://gist.github.com/PhilippLgh/1b6505d3caf1a183afb12cb5f387ca07](https://gist.github.com/PhilippLgh/1b6505d3caf1a183afb12cb5f387ca07)
