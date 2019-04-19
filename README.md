@@ -2,7 +2,7 @@
 
 ## Prices - The "Grid Wishlist"
 
-###500 DAI for...
+### 500 DAI for...
 
 .. our suggestions but not limited to **(bonus points for creativity)**:
 
@@ -222,6 +222,14 @@ Clients emit the following event types:
 #### Example: Wallet Starter
 
 ![Wallet Starter Example](/assets/Wallet-Starter.png)
+
+## Quick Start
+```
+git clone https://github.com/PhilippLgh/EthCapetownWorkshop.git
+cd EthCapetownWorkshop
+```
+
+## From Scratch
 
 1. Create a new React app and start the server
 
