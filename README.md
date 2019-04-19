@@ -1,5 +1,29 @@
 # EthCapetownWorkshop
 
+## Installation
+
+Grid consists of 2 parts: the main application and the UI.
+In order to hack on Grid we want to start it in `dev mode`which is why we clone both repos and run from source:
+
+```
+mkdir grid
+cd grid
+```
+Install and run Grid UI:
+```
+git clone https://github.com/ethereum/grid-ui.git
+cd grid-ui
+yarn && yarn start
+```
+Install and run Grid:
+```
+cd ..
+git clone https://github.com/ethereum/grid.git
+yarn && yarn start:dev
+```
+
+There are also prebuilt and pre-bundled installers and binaries available to have a convenient way to run the `production` version. The binaries can be found on the [Grid Website](https://grid.ethereum.org/) or the [GitHub releases](https://github.com/ethereum/grid/releases).
+
 ## What is Grid?
 
 “Often referred to […] as “digital frontier", the Grid was made to provide an experimental platform where all forms of research could be carried out at unparalleled speeds.” - [Tron Movie](https://tron.fandom.com/wiki/Grid)
@@ -32,30 +56,6 @@ If your goal is to write an application like CryptoKitties you should probably c
 However, if you plan to develop a visualization for network behavior & events, a P2P sharing app for Swarm, a signer UI for Clef, your own wallet, dev tools or test suites to compare different spec implementations then you will probably want to use Grid to accelerate the development.
 
 Also if you don't want to host your app on a server but have it packaged and deployed in a more decentralized fashion, then Grid, `ethpkg` and `electron-app-manager` can help you with that as well.
-
-## Installation
-
-Grid consists of 2 parts: the main application and the UI.
-In order to hack on Grid we want to start it in `dev mode`which is why we clone both repos and run from source:
-
-```
-mkdir grid
-cd grid
-```
-Install and run Grid UI:
-```
-git clone https://github.com/ethereum/grid-ui.git
-cd grid-ui
-yarn && yarn start
-```
-Install and run Grid:
-```
-cd ..
-git clone https://github.com/ethereum/grid.git
-yarn && yarn start:dev
-```
-
-There are also prebuilt and pre-bundled installers and binaries available to have a convenient way to run the `production` version. The binaries can be found on the [Grid Website](https://grid.ethereum.org/) or the [GitHub releases](https://github.com/ethereum/grid/releases).
 
 ## Extending Grid
 
