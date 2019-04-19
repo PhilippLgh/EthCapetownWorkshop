@@ -1,5 +1,9 @@
 # EthCapetownWorkshop
 
+## Shortlink
+
+### bit.ly/2UsIcOb
+
 ## Prizes - The "Grid Wishlist"
 
 ### 500 DAI for...
