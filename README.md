@@ -202,7 +202,9 @@ Clients emit the following event types:
 
 `log`: the client has written something to `stdout`, usually terminal output.
 
-#### Example: Toy Wallet Starter
+#### Example: Wallet Starter
+
+![Wallet Starter Example](/assets/Wallet-Starter.png)
 
 1. Create a new React app and start the server
 
